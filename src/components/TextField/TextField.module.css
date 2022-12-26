@@ -1,0 +1,18 @@
+.text__field {
+  margin: 24px 0;
+}
+
+.text__field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.text__field input {
+  background-color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0);
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  padding: 24px;
+}
