@@ -1,10 +1,8 @@
-import { useState } from "react";
-import "./App.css";
+import { Banner } from "./components/Banner/Banner";
+import "./global.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <h1>Bem vindo React com Alura</h1>;
+  return <Banner />;
 }
 
 export default App;
