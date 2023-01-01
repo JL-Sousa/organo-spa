@@ -9,7 +9,6 @@ export function Form(props) {
   const [office, setOffice] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
-  const times = ["Programacao", "Frontend", "Data Sciense", "Devops"];
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -49,7 +48,7 @@ export function Form(props) {
           value={time}
           mandatory={true}
           name="Time"
-          itens={times}
+          itens={props.times}
           handleInput={(value) => setTime(value)}
         />
         <Button>Criar Card</Button>
