@@ -4,21 +4,26 @@ import { DropdownList } from "../DropdownList";
 import { TextField } from "../TextField";
 import styles from "./Form.module.css";
 
-export function Form() {
+export function Form(props) {
   const [name, setName] = useState("");
   const [office, setOffice] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
   const times = ["Programacao", "Frontend", "Data Sciense", "Devops"];
 
-  const save = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form foi submetido!", name, office, imagem, time);
+    props.registeredEmployee({
+      name,
+      office,
+      imagem,
+      time,
+    });
   };
 
   return (
     <section className={styles.container__form}>
-      <form onSubmit={save}>
+      <form onSubmit={handleSubmit}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
         <TextField
           value={name}
