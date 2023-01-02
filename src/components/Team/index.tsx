@@ -28,6 +28,7 @@ export function Team({
             name={collaborator.name}
             office={collaborator.office}
             imagem={collaborator.imagem}
+            date={collaborator.date}
           />
         ))}
       </div>

@@ -15,7 +15,7 @@ export function Form(props: FormProps) {
   const [office, setOffice] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
-  // const [date, setDate] = useState("");
+  const [date, setDate] = useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -24,12 +24,14 @@ export function Form(props: FormProps) {
       office,
       imagem,
       time,
+      date,
     });
 
     setName("");
     setOffice("");
     setImagem("");
     setTime("");
+    setDate("");
   };
 
   return (
@@ -56,12 +58,13 @@ export function Form(props: FormProps) {
           placeholder="Informe o endereço da imagem"
           handleInput={(value) => setImagem(value)}
         />
-        {/* <TextField
+        <TextField
           name="data de entrada no time"
           placeholder=""
           value={date}
           handleInput={(value) => setDate(value)}
-        /> */}
+          type="date"
+        />
         <DropdownList
           value={time}
           mandatory={true}

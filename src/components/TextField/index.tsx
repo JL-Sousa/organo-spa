@@ -6,6 +6,7 @@ interface TextFieldProps {
   value: string;
   mandatory?: boolean;
   placeholder: string;
+  type?: "text" | "password" | "number" | "date" | "email";
 }
 export function TextField({
   handleInput,
@@ -13,6 +14,7 @@ export function TextField({
   value,
   placeholder,
   mandatory = false,
+  type = "text",
 }: TextFieldProps) {
   const handleInputTyping = (event: React.ChangeEvent<HTMLInputElement>) => {
     handleInput(event.target.value);
@@ -26,6 +28,7 @@ export function TextField({
         onChange={handleInputTyping}
         required={mandatory}
         placeholder={placeholder}
+        type={type}
       />
     </div>
   );
