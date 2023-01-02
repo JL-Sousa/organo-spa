@@ -1,7 +1,5 @@
 import styles from "./Banner.module.css";
 
-import React from "react";
-
 interface BannerProps {
   imagemAddress: string;
   altText?: string;

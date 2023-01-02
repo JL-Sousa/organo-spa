@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Banner } from "./components/Banner/";
+import { Banner } from "./components/Banner";
 import { Footer } from "./components/Footer";
 import { Form } from "./components/Form";
 import { Team } from "./components/Team";
 import "./global.css";
+import { ICollaborator } from "./shared/interfaces/ICollaborator";
 
 function App() {
   const times = [
@@ -43,10 +44,9 @@ function App() {
       secondaryColor: "#FFEEDF",
     },
   ];
-  const [contributors, setContributors] = useState([]);
+  const [contributors, setContributors] = useState<ICollaborator[]>([]);
 
-  const newContributorAdded = (collaborator) => {
-    debugger;
+  const newContributorAdded = (collaborator: ICollaborator) => {
     setContributors([...contributors, collaborator]);
   };
 

@@ -14,25 +14,25 @@ export function Team({
   name,
   contributors,
 }: TeamProps) {
-  return (
-    contributors.length > 0 && (
-      <section
-        className={styles.team}
-        style={{ backgroundColor: secondaryColor }}
-      >
-        <h3 style={{ borderColor: primaryColor }}>{name}</h3>
-        <div className={styles.contributors}>
-          {contributors.map((collaborator) => (
-            <Collaborator
-              backgroundColorCard={primaryColor}
-              key={collaborator.name}
-              name={collaborator.name}
-              office={collaborator.office}
-              imagem={collaborator.imagem}
-            />
-          ))}
-        </div>
-      </section>
-    )
+  return contributors.length > 0 ? (
+    <section
+      className={styles.team}
+      style={{ backgroundColor: secondaryColor }}
+    >
+      <h3 style={{ borderColor: primaryColor }}>{name}</h3>
+      <div className={styles.contributors}>
+        {contributors.map((collaborator) => (
+          <Collaborator
+            backgroundColorCard={primaryColor}
+            key={collaborator.name}
+            name={collaborator.name}
+            office={collaborator.office}
+            imagem={collaborator.imagem}
+          />
+        ))}
+      </div>
+    </section>
+  ) : (
+    <></>
   );
 }
