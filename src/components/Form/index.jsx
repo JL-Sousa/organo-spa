@@ -18,6 +18,11 @@ export function Form(props) {
       imagem,
       time,
     });
+
+    setName("");
+    setOffice("");
+    setImagem("");
+    setTime("");
   };
 
   return (

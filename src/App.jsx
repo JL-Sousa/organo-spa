@@ -46,7 +46,7 @@ function App() {
 
   const newContributorAdded = (collaborator) => {
     console.log(collaborator);
-    setContributors(...contributors, collaborator);
+    setContributors([...contributors, collaborator]);
   };
 
   return (
@@ -62,6 +62,9 @@ function App() {
           name={team.name}
           primaryColor={team.primaryColor}
           secondaryColor={team.secondaryColor}
+          contributors={contributors.filter(
+            (collaborator) => collaborator.time === team.name
+          )}
         />
       ))}
     </>
