@@ -1,6 +1,17 @@
 import styles from "./Collaborator.module.css";
 
-export function Collaborator({ name, office, imagem, backgroundColorCard }) {
+interface CollaboratorProps {
+  name: string;
+  office: string;
+  imagem: string;
+  backgroundColorCard: string;
+}
+export function Collaborator({
+  name,
+  office,
+  imagem,
+  backgroundColorCard,
+}: CollaboratorProps) {
   return (
     <div className={styles.collaborator}>
       <div
