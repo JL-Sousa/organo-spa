@@ -9,6 +9,7 @@ export function DropdownList(props) {
         required={props.mandatory}
         value={props.value}
       >
+        <option value=""></option>
         {props.itens.map((item) => {
           return <option key={item}>{item}</option>;
         })}

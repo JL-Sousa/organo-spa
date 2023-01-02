@@ -46,7 +46,7 @@ function App() {
   const [contributors, setContributors] = useState([]);
 
   const newContributorAdded = (collaborator) => {
-    console.log(collaborator);
+    debugger;
     setContributors([...contributors, collaborator]);
   };
 

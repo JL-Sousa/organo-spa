@@ -12,6 +12,8 @@ export function Team(props) {
         <div className={styles.contributors}>
           {props.contributors.map((collaborator) => (
             <Collaborator
+              backgroundColorCard={props.primaryColor}
+              key={collaborator.name}
               name={collaborator.name}
               office={collaborator.office}
               imagem={collaborator.imagem}
