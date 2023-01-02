@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Banner } from "./components/Banner/Banner";
+import { Banner } from "./components/Banner/";
 import { Footer } from "./components/Footer";
 import { Form } from "./components/Form";
 import { Team } from "./components/Team";
@@ -52,7 +52,10 @@ function App() {
 
   return (
     <>
-      <Banner />
+      <Banner
+        imagemAddress={"/imagens/banner.png"}
+        altText={"O banner principal do site organo"}
+      />
       <Form
         times={times.map((team) => team.name)}
         registeredEmployee={(collaborator) => newContributorAdded(collaborator)}
