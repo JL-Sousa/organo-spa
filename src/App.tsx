@@ -6,7 +6,7 @@ import { Team } from "./components/Team";
 import "./global.css";
 import { ICollaborator } from "./shared/interfaces/ICollaborator";
 
-function App() {
+export function App() {
   const times = [
     {
       name: "Programação",
@@ -75,5 +75,3 @@ function App() {
     </>
   );
 }
-
-export default App;
